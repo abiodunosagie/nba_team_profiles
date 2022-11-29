@@ -15,7 +15,7 @@ class IntroPage extends StatefulWidget {
 
 class _IntroPageState extends State<IntroPage> {
   // controller to keep track of which page we're on
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   // keep track of if we are on the last page or not
   bool onLastPage = false;
@@ -32,7 +32,7 @@ class _IntroPageState extends State<IntroPage> {
               onLastPage = (index == 2);
             });
           },
-          children: [
+          children: const [
             Screen1(),
             Screen2(),
             Screen3(),
@@ -53,7 +53,7 @@ class _IntroPageState extends State<IntroPage> {
               ),
               SmoothPageIndicator(
                 controller: _controller,
-                effect: WormEffect(
+                effect: const WormEffect(
                     dotColor: Colors.white,
                     activeDotColor: Colors.cyanAccent,
                     dotHeight: 10,
@@ -71,15 +71,15 @@ class _IntroPageState extends State<IntroPage> {
                           ),
                         );
                       },
-                      child: Text('Done'),
+                      child: const Text('Done'),
                     )
                   : GestureDetector(
                       onTap: () {
                         _controller.nextPage(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             curve: Curves.easeIn);
                       },
-                      child: Text('Next'),
+                      child: const Text('Next'),
                     ),
             ],
           ),

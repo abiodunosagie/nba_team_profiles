@@ -25,7 +25,7 @@ class NbaTeam extends StatelessWidget {
             splash: Image.asset(
               'images/nbalogo.png',
             ),
-            nextScreen: IntroPage(),
+            nextScreen: const IntroPage(),
           ),
         );
       },
