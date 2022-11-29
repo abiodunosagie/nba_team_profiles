@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[400],
+                    color: Colors.grey[500],
                   ),
                   child: ListTile(
                     title: Text(teams[index].abbreviation),
